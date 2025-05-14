@@ -7,10 +7,9 @@ function Footer() {
                 <div className=" w-[90%] mx-auto   " >
                     <div className="gap-20 pt-16 md:py-24  flex flex-col md:flex-row justify-between " >
 
-                        <div className="flex flex-col sm:flex-row justify-between gap-8  sm:gap-10 lg:gap-20 " >
-                            <div className="text-[#9F9F9F] md:justify-center items-center  h-full flex flex-col "  >
-                                <div>400 University Drive Suite 200 Coral ,
-                                </div>
+                        <div className="flex flex-col w-full h-full sm:flex-row justify-between gap-8  sm:gap-10 lg:gap-20 " >
+                            <div className="text-[#9F9F9F]  justify-center  flex flex-col "  >
+                                <div>400 University Drive Suite 200 Coral , </div>
                                 <div>Gables </div>
                                 <div>FL 33134 USA</div>
                             </div>
@@ -48,7 +47,7 @@ function Footer() {
 
                     <div>
                         <hr className="text-[#D9D9D9] border-[1px]  mb-5 " />
-                        <p>2022 Meubel House. All rights reverved</p>
+                        <p className=" text:[15px] lg:text-[16px] leading-[24px] " >2022 Meubel House. All rights reverved</p>
                     </div>
                 </div>
 

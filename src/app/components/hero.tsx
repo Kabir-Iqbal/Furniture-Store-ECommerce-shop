@@ -28,26 +28,48 @@ async function Hero() {
 
 
   return (
-    <div className={`max-w-[1440px] mx-auto w-[100%] ${poppins.className} `} >
-      {/* landing Page */}
-      <div className={` h-[900px]  w-[100%] mx-auto bg-[#FBEBB5] ${poppins.className} `} >
-        <div className='flex flex-col py-8 md:flex-row pt-5 sm:gap-5 w-[90%] lg:w-[85%] mx-auto h-full   ' >
+    // <div className={`max-w-[1440px] mx-auto w-[100%] ${poppins.className} `} >
+    //   {/* landing Page */}
+    //   <div className={` h-[900px]  w-[100%] mx-auto bg-[#FBEBB5] ${poppins.className} `} >
+    //     <div className='flex flex-col py-8 md:flex-row pt-5 sm:gap-5 w-[90%] lg:w-[85%] mx-auto h-full   ' >
 
-          <div className=' order-2 md:order-1 flex-nowrap text-[64px]  my-auto flex gap-0 sm:gap-5 flex-col font-semibold ' >
-            <p className=' text-[28px] sm:leading-[40px]  md:text-[30px] md:leading-[50px] lg:text-[64px] lg:leading-[96px] ' >Rocket single seater</p>
+    //       <div className=' order-2 md:order-1 flex-nowrap text-[64px]  my-auto flex gap-0 sm:gap-5 flex-col font-semibold ' >
+    //         <p className=' text-[28px] sm:leading-[40px]  md:text-[30px] md:leading-[50px] lg:text-[64px] lg:leading-[96px] ' >Rocket single seater</p>
 
-            <div className="w-[121px] " >
-              <button className="text-start text-[24px] leading-[36px] font-semibold " >Shop Now  </button>
-              <hr className=" border-gray-800 mt-2" />
-            </div>
-          </div>
+    //         <div className="w-[121px] " >
+    //           <button className="text-start text-[24px] leading-[36px] font-semibold " >Shop Now  </button>
+    //           <hr className=" border-gray-800 mt-2" />
+    //         </div>
+    //       </div>
 
-          <div className=" order-1 md:order-2 h-full pt-2 sm:py-12 flex-nowrap px-2 md:px-0  mx-auto  sm:[550px]  md:w-[600px]  lg:w-[833px] justify-end items-center flex " >
-            <Image className=" scale-x-[-1] rotate-3  sm:justify-end flex  w-full h-[400px] sm:h-[500px]  md:h-[600px] lg:h-[650px] "
-              src={"/images/chair.png"} alt={"chair"} width={500} height={700} />
-          </div>
-        </div>
+    //       <div className=" order-1 md:order-2 h-full pt-2 sm:py-12 flex-nowrap px-2 md:px-0  mx-auto  sm:[550px]  md:w-[600px]  lg:w-[833px] justify-end items-center flex " >
+    //         <Image className=" scale-x-[-1] rotate-3  sm:justify-end flex  w-full h-[400px] sm:h-[500px]  md:h-[600px] lg:h-[650px] "
+    //           src={"/images/chair.png"} alt={"chair"} width={500} height={700} />
+    //       </div>
+    //     </div>
+    //   </div>
+ <div className="max-w-[1440px] mx-auto w-full">
+  <div className="bg-[#FBEBB5] py-8 md:py-16 lg:py-24">
+    <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row gap-8 md:gap-16">
+      <div className="order-1 md:order-2 md:w-1/2 lg:w-3/5">
+        <Image
+          src="/images/chair.png"
+          alt="chair"
+          className="w-full h-auto transform scale-x-[-1] rotate-3"
+          width={500}
+          height={700}
+        />
       </div>
+      <div className="order-2 md:order-1 my-auto md:w-1/2 lg:w-2/5 flex flex-col items-start space-y-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold">Rocket single seater</h1>
+        <div className="w-full max-w-xs">
+           <button className="text-2xl font-semibold border-b border-gray-800 pb-2 mt-5">Shop Now</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
 
       {/* second section */}
       <div className={` h-[970px] md:h-[672px] bg-[#FAF4F4]  ${poppins.className} `} >
@@ -94,13 +116,13 @@ async function Hero() {
         <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-2 my-14 lg:my-20 ${poppins.className} `} >
           {data.slice(0, 4).map((products: Product, index: number) => (
             <Link key={index} href={`/dynamicRoute/${products.slug}`} >
-              <div className="flex flex-col gap-3 w-[220px] h-[300px] sm:w-[287px] sm:h-[397px] px-8 sm:px-4 md:px-2 " >
+              <div className="flex flex-col gap-4  h-[300px] sm:w-[287px] sm:h-[397px]  sm:px-4 md:px-2 " >
                 <div className=" w-full h-[287px] " >
                   <Image className=" h-full w-full "
                     src={products.image} alt={products.heading} width={255} height={200} />
                 </div>
-                <h2 className="text-[16px] leading-[24px] px-2 " > {products.heading} </h2>
-                <p className="font-semibold text-[24px] leading-[34px] px-2 " > {` Rs.${products.price}`} </p>
+                <h2 className=" text-[14px] sm:text-[16px] leading-[24px] md:px-2 " > {products.heading} </h2>
+                <p className="font-semibold text-[18px] md:text-[24px] leading-[34px] px-2 " > {` Rs.${products.price}`} </p>
               </div>
             </Link>
           ))}
@@ -129,49 +151,57 @@ async function Hero() {
           </div>
         </div>
       </div>
-
       {/* Blog Section */}
-      <div className="bg-[#FFFFFF] w-[90%] mx-auto h-fit lg:h-[944px] pt-9   " >
-        <p className={`text-center text-[36px] leading-[56px] ${poppins.className} font-semibold mt-2 `} >Our Blogs</p>
-        <p className="text-[16px] leading-[24px] text-[#9F9F9F] text-center my-5 " >Find a bright ideal to suit your taste with our great selection</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-7 lg:gap-5 my-12 " >
+      <div className="bg-white w-[90%] mx-auto h-fit lg:h-auto pt-9 pb-16 overflow-hidden">
+        <p className={`text-center  text-[36px] leading-[46px] ${poppins.className} font-semibold mt-2 text-gray-800`}>
+          Our Blogs
+        </p>
+        <p className="text-[16px] leading-[24px] text-gray-500 text-center mt-2">
+          Find a bright idea to suit your taste with our great selection
+        </p>
 
-          <div className={`text-center ${poppins.className} grid grid-cols-1 gap-2  `} >
-            <Image className=" w-full rounded-md h-[393px] "
-              src="/images/keyboard.jpeg" alt="Keyboard Blog" width={393} height={393} />
-            <p className={`text-[20px] leading-[30px] mt-2  `} >Going all-in with millennial design</p>
-            <div className="w-[130px] h-[46px] mx-auto  " >
-              <button className="text-[24px] leading-[34px] font-semibold" >Read More</button>
-              <hr className="w-[80%] mx-auto border-gray-700  " />
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mt-12">
+          {/* Blog Card 1 */}
+          <div className={`text-center ${poppins.className} bg-gray-100 p-5 rounded-lg shadow-md`}>
+            <Image className="w-full rounded-md h-[280px] object-cover" src="/images/keyboard.jpeg" alt="Keyboard Blog" width={393} height={280} />
+            <p className="text-[20px] font-semibold mt-4 text-gray-800">Going all-in with millennial design</p>
+            <div className="w-[130px] h-[46px] mx-auto mt-2">
+              <button className="text-[18px] font-semibold text-blue-600 hover:text-blue-700 transition-all">Read More</button>
+              <hr className="w-[80%] mx-auto border-gray-400 mt-1" />
             </div>
-            <p>5 min 12th Oct 2022</p>
+            <p className="text-gray-500 mt-1">5 min • 12th Oct 2022</p>
           </div>
 
-          <div className={`text-center ${poppins.className} grid grid-cols-1 gap-2  `} >
-            <Image className="w-full rounded-md h-[393px]  "
-              src="/images/bloglaptop.jpeg" alt="Laptop Blog" width={393} height={393} />
-            <p className={`text-[20px] leading-[30px] mt-2  `} >Going all-in with millennial design</p>
-            <div className="w-[130px] h-[46px] mx-auto  " >
-              <button className="text-[24px] leading-[34px] font-semibold" >Read More</button>
-              <hr className="w-[80%] mx-auto border-gray-700  " />
+          {/* Blog Card 2 */}
+          <div className={`text-center ${poppins.className} bg-gray-100 p-5 rounded-lg shadow-md`}>
+            <Image className="w-full rounded-md h-[280px] object-cover" src="/images/bloglaptop.jpeg" alt="Laptop Blog" width={393} height={280} />
+            <p className="text-[20px] font-semibold mt-4 text-gray-800">Exploring the future of tech</p>
+            <div className="w-[130px] h-[46px] mx-auto mt-2">
+              <button className="text-[18px] font-semibold text-blue-600 hover:text-blue-700 transition-all">Read More</button>
+              <hr className="w-[80%] mx-auto border-gray-400 mt-1" />
             </div>
-            <p>5 min 12th Oct 2022</p>
+            <p className="text-gray-500 mt-1">5 min • 12th Oct 2022</p>
           </div>
 
-          <div className={`text-center ${poppins.className} grid grid-cols-1 gap-2  `} >
-            <Image className="w-full rounded-md h-[393px] "
-              src="/images/blog2lap2.jpeg" alt="Our Blog" width={393} height={393} />
-            <p className={`text-[20px] leading-[30px] mt-2  `} >Going all-in with millennial design</p>
-            <div className="w-[130px] h-[46px] mx-auto  " >
-              <button className="text-[24px] leading-[34px] font-semibold" >Read More</button>
-              <hr className="w-[80%] mx-auto border-gray-700  " />
+          {/* Blog Card 3 */}
+          <div className={`text-center ${poppins.className} bg-gray-100 p-5 rounded-lg shadow-md`}>
+            <Image className="w-full rounded-md h-[280px] object-cover" src="/images/blog2lap2.jpeg" alt="Our Blog" width={393} height={280} />
+            <p className="text-[20px] font-semibold mt-4 text-gray-800">Innovations in modern UI/UX</p>
+            <div className="w-[130px] h-[46px] mx-auto mt-2">
+              <button className="text-[18px] font-semibold text-blue-600 hover:text-blue-700 transition-all">Read More</button>
+              <hr className="w-[80%] mx-auto border-gray-400 mt-1" />
             </div>
-            <p>5 min 12th Oct 2022</p>
+            <p className="text-gray-500 mt-1">5 min • 12th Oct 2022</p>
           </div>
         </div>
-        <div className="w-[136px] mx-auto my-20 md:my-24 lg:my-32 " >
-          <button className={`text-[20px] leading-[30px] text-center ${poppins.className} font-semibold  `} > View All Post </button>
-          <hr className="w-[80%] mx-auto border-gray-700 " />
+
+        {/* View All Button */}
+        <div className="w-[160px] mx-auto text-center mt-14">
+          <button className={`text-[18px] text-center font-semibold text-blue-600 hover:text-blue-700 transition-all ${poppins.className}`}>
+            View All Posts
+          </button>
+          <hr className=" w-[90%] mx-auto border-gray-400 mt-1" />
         </div>
       </div>
 
@@ -179,8 +209,8 @@ async function Hero() {
       {/* background image-section */}
       <div className="relative w-full h-[450px]" >
         <div className=" absolute inset-0 w-full h-[450px] bg-custom opacity-50 " > </div>
-        <div className={`w-[454px] h-[202] mx-auto relative py-24 ${poppins.className} `} >
-          <h2 className="font-semibold text-[33px] leading-[50px] md:text-[40px] md:leading-[70px] lg:text-[60px] lg:leading-[90px] text-center " >Our Instagram</h2>
+        <div className={` md:w-[454px] h-[202] mx-auto relative py-24 ${poppins.className} `} >
+          <h2 className="font-semibold text-[33px] leading-[50px] md:text-[40px] md:leading-[70px] lg:text-[60px] lg:leading-[90px] text-center">Our Instagram</h2>
           <p className="text-center text-[16px] leading-[24px] md:text-[18px] md:leading-[28px] lg:text-[20px] lg:leading-[30px] " >Follow our store on Instagram</p>
           <div className="text-center mt-4 ">
             <button className=" text[16px] leading-[24px] md:text-[18px] md:leading-[28px] lg:text[20px] lg:leading-[30px] " >Follow Us </button>

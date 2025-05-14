@@ -20,7 +20,7 @@ function Page() {
         <div className="relative w-[196px] h-full mx-auto flex flex-col justify-center  " >
           <Image className="mx-auto "
             src={"/images/logo.png"} alt="" width={77} height={77} />
-          <h1 className="text-[48px] leading-[72px] font-semibold text-center " >Contact</h1>
+          <h1 className=" text-[38px] leading-[68px] lg:text-[48px] lg:leading-[72px] font-semibold text-center  " >Contact</h1>
 
           <div className="flex text-[16px] leading-[24px] gap-1 items-center mx-auto " >
             <p className="font-semibold" >Home</p>
@@ -31,17 +31,18 @@ function Page() {
       </div>
 
       <div className='bg-[#FFFFFF] w-[90%] mx-auto py-8 ' >
-        <div className='w-[644px] mx-auto ' >
-          <h1 className='text-center text-[36px] leading-[54px] font-semibold ' >Get In Touch With Us</h1>
+        <div className=' lg:w-[644px] mx-auto px-4 ' >
+          <h1 className='text-center text-[28px] leading-[48px] md:text-[36px] md:leading-[54px] font-semibold ' >Get In Touch With Us</h1>
           <p className='text-center text-[16px] leading-[24px] text-[#9F9F9F] ' >For More Information About Our Product & Services. Please Feel Free To Drop Us An Email.
             Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
         </div>
 
 
         {     /*Location  */}
-        <div className='flex h-[923px] py-28 ' >
-          <div className='h-[393px]  w-full flex-1' >
-            <div className='w-[537px] mx-auto h-full grid gap-10  justify-center ' >
+        <div className='flex flex-col md:flex-row h-fit lg:h-[923px] py-16 md:py-20 lg:py-28 ' >
+
+          <div className='h-[393px] order-2 md:order-1 mt-20 sm:py-0 w-full flex-1' >
+            <div className=' w-[95%] lg:w-[537px] mx-auto h-full grid gap-10 justify-start md:justify-center ' >
 
               <div className='flex gap-3 '  >
                 <IoLocationSharp className='text-xl' />
@@ -49,7 +50,6 @@ function Page() {
                   <h1 className='' >Address</h1>
                   <p>236 5th SE Avenue, New York NY10000, United States</p>
                 </div>
-
               </div>
 
               <div className='flex gap-3 ' >
@@ -75,51 +75,51 @@ function Page() {
           </div>
 
 
-          <div className='flex-1 ' >
-                  <div className=' w-[527px] mx-auto h-[734px] my-auto ' >
-                       <form  className='grid gap-4'  action="">
-                              <label  htmlFor="name">
-                              <p className='my-1' >  Your Name  </p>
-                                <input type="text" name='name' id='name'  placeholder='Your Name..' 
-                                className='rounded-xl w-full px-2 h-[75px]  border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
-                              </label>
+          <div className='flex-1 order-1 md:order-2 ' >
+            <div className=' w-[99%] sm:w-[70%]  md:w-[95%] lg:w-[527px] mx-auto md:h-[734px] my-auto ' >
+              <form className='grid gap-2 md:gap-4' action="">
+                <label htmlFor="name">
+                  <p className='my-1' >  Your Name  </p>
+                  <input type="text" name='name' id='name' placeholder='Your Name..'
+                    className='rounded-xl w-full px-2 h-[55px] sm:h-[60px] md:h-[75px]  border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
+                </label>
 
-                              <label className='my-4' htmlFor="email">
-                              <p className='my-1'> Email Address  </p>
-                                <input type="email" name='email' id='email'  placeholder='abc@gmail.com' 
-                                className='rounded-xl w-full px-2 h-[75px]  border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
-                              </label>
+                <label className='my-4' htmlFor="email">
+                  <p className='my-1'> Email Address  </p>
+                  <input type="email" name='email' id='email' placeholder='abc@gmail.com'
+                    className='rounded-xl w-full px-2 h-[55px] sm:h-[60px] md:h-[75px]  border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
+                </label>
 
-                              <label className='my-4' htmlFor="subject">
-                              <p className='my-1'>Subject  </p>
-                                <input type="text"  name='subject' id='subject'  placeholder='This is an optional' 
-                                className='rounded-xl w-full px-2 h-[75px]  border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
-                              </label>
+                <label className='my-4' htmlFor="subject">
+                  <p className='my-1'>Subject  </p>
+                  <input type="text" name='subject' id='subject' placeholder='This is an optional'
+                    className='rounded-xl w-full px-2 h-[55px] sm:h-[60px] md:h-[75px] border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
+                </label>
 
-                              <label className='my-4' htmlFor="message">
-                              <p className='my-1'>Message  </p>
-                                <textarea  name='message' id='message'  placeholder='Hi! i’d like to ask about' 
-                                className=' rounded-xl w-full h-[120px]  px-2 border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
-                              </label>
+                <label className='mb-2 md:my-4' htmlFor="message">
+                  <p className='my-1'>Message  </p>
+                  <textarea name='message' id='message' placeholder='Hi! i’d like to ask about'
+                    className=' rounded-xl w-full h-[75px] sm:h-[85px] md:h-[120px]  px-2 border-[#9F9F9F] border-[2px] text-[#9F9F9F] text-[16px] leading-[24px] ' />
+                </label>
 
-                              <div className='w-[237px] h-[48px] flex justify-center items-center border-black border-[1px] rounded-2xl cursor-pointer ' >
-                                <button>Submit</button>
-                              </div>
-                       </form>
-                  </div>
-           </div>
+                <div className='w-[237px] mx-auto md:mx-0 h-[48px] flex justify-center items-center border-black border-[1px] rounded-2xl cursor-pointer ' >
+                  <button>Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
 
         </div>
 
-
+        </div>
         {/* Custom Privacy & Policy*/}
         <CustomPolicy />
 
-        {/* Footer */}
 
+        {/* Footer */}
         <Footer />
-        
-      </div>
+
+     
     </div>
   )
 }
