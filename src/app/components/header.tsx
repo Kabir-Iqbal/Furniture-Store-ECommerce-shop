@@ -34,7 +34,7 @@ function Header({ bgColor }: { bgColor: string }) {
 
    // get User Information
    const {isLoaded , isSignedIn , user} = useUser()
-   console.log(user?.firstName)
+   
 
 
 
