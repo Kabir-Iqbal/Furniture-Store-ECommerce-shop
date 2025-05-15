@@ -18,7 +18,7 @@
     "@sanity/vision": "^3.68.3",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
-    "next": "14.2.2",
+    "next": "14.2.3",
     "next-fonts": "^1.5.1",
     "next-sanity": "^9.8.30",
     "react": "^18",
