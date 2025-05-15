@@ -44,7 +44,7 @@ interface Params {
 function Page(params: Params) {
 
     const { slug } = params.params;
-    console.log(slug)
+    
 
     const [data, setData] = useState<Product>();
     const [relatedProduct, setRelatedProduct] = useState<Product[]>([])
