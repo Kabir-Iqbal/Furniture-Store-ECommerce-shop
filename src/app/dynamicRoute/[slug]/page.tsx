@@ -15,6 +15,7 @@ import { useCart } from "@/app/contextapi/Cartcontext";
 // adding toastify on addtoCart
 import { ToastContainer, toast } from 'react-toastify';
 import Spinner from "@/app/components/spiner";
+import { ClipLoader } from "react-spinners";
 
 
 
@@ -131,7 +132,7 @@ function Page(params: Params) {
 
 
 
-    if (!data) return <Spinner />;
+    if (!data) return  <p> Loading... </p>;
 
 
 
@@ -153,10 +154,15 @@ function Page(params: Params) {
                 <div>
                     <div className="flex flex-col md:flex-row gap-10 my-12 " >
                         {/* right side */}
+                    {!data.image ? 
+                        <div className="col-span-full flex justify-center items-center min-h-[300px] sm:min-h-[400px] my-auto " >
+                           <ClipLoader color="#4A90E2" size={30} />
+                        </div> :  
                         <div className="bg-[#FFF9E5] w-[90%] mx-auto h-[350px] sm:[380px] md:h-[400px] lg:w-[481px] lg:h-[500px] flex-1  " >
                             <Image className=" w-full h-[381px]"
                                 src={data.image} alt={data.heading} height={380} width={480} />
                         </div>
+                    }
 
 
                         {/* left side */}

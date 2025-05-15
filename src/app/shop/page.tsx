@@ -12,6 +12,7 @@ import { Poppins } from "next/font/google"
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
+import Spinner from "../components/spiner";
 
 
 const poppins = Poppins({
@@ -63,9 +64,7 @@ function Page() {
         fetchData()
     }, [])
 
-    if (!store) {
-        <p> Loading... </p>
-    }
+    
 
 
     return (
@@ -129,7 +128,7 @@ function Page() {
 
             <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-5 my-14 lg:my-20 " >
                 {store.length === 0 ? (
-                <div className="w-full  grid place-items-center my-20 ">
+                <div className="col-span-full flex justify-center items-center min-h-[300px] sm:min-h-[400px] my-10 ">
                     <ClipLoader color="#4A90E2" size={30} />
                 </div>
                 ) :(
